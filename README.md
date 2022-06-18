@@ -19,5 +19,8 @@
 ### This script could look a bit scary but don't worry, you'll eventually get it.
  5. ### So to get started paste the code down below in you ahk script.
 ```
-
+#SingleInstance force ;This will force that no other instance of this script run
+F2:: ;This is the button you will press
+MsgBox My first Script, You pressed F2 on the keyboard ;This will be your text written on a message box, you can change this line except "MsgBox".
+Return ;This will stop another line of code in your script from running from a sigle hotkey which in this case is F2.
 ```
