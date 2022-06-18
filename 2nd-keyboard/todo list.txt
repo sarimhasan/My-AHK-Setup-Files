@@ -1,0 +1,11 @@
+The things I want to add in my ahk and on the second keyboard.
+
+    1. my email writer
+    2. my blender script, that would include:
+        i. to make the keyframes linear
+        ii. to make the keyframes bezier
+    3. my premiere additional script that would include:
+        i. add audio gain
+        ii. reverse or irreverse the video file
+        iii. To open different most used panel shortcuts
+    4. To make an ahk files that automatically starts intercept.exe and the full extra keyboard and other ahk files

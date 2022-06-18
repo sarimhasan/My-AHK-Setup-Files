@@ -1,0 +1,101 @@
+ sarimhasanplace123@gmail.com
+
+ ^Numpad0::
+InputBox, DirectoryName, Set Actvie Project folder, Enter Actvie Project folder,, 300, 130,,,,, %DirectoryName%
+if (ErrorLevel = 1) {
+    Return
+}
+
+
+else if FileExist(DirectoryName) {
+    MsgBox,, Active Folder Set, Active Folder: %DirectoryName%, 2
+    Hotkey, ^Numapd1, On
+    Hotkey, ^Numapd2, On
+    Hotkey, ^Numapd3, On
+    Hotkey, ^Numapd4, On
+    Hotkey, ^Numapd5, On
+    Return
+}
+else if (DirectoryName = "") {
+    Gosub, AllOff
+    return
+}
+
+
+
+
+^Numpad1:: Run, %DirectoryName%/Assets
+
+^Numpad2:: Run, %DirectoryName%/Videos
+
+^Numpad3:: Run, %DirectoryName%/Documents
+
+^Numpad4:: Run, %DirectoryName%/Project Files
+
+^Numpad5:: Run, %DirectoryName%/Music
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inputbox, DirectoryName, Set Active Project Folder, Enter Active Project Folder:,, 300, 130,,,,, %DirectoryName%
+if (ErrorLevel = 1) {
+    Return
+}
+else if FileExist(DirectoryName) {
+    MsgBox,, Active Folder Set, Active Folder: %DirectoryName%, 1
+    Hotkey, Delete, On
+    Hotkey, Home, On
+    Hotkey, End, On
+    Hotkey, PgUp, On
+    Hotkey, PgDn, On
+    Return
+}
+else if (DirectoryName = "") {
+    MsgBox,, Hotkeys Off, Entry field blank, 2
+    Gosub, AllOff
+    Return
+}
+else {
+    MsgBox,, Hotkeys Off, Entry field not valid, 2
+    Gosub, AllOff
+    Return
+}
+#if (getKeyState("F23", "P")) and #IfWinActive
+
+if FileExist(DirectoryName "/Assets")
+    Run, %DirectoryName%/Assets
+    Return
+
+#if (getKeyState("F23", "P")) and #IfWinActive
+if FileExist(DirectoryName "/Videos")
+    Run, %DirectoryName%/Videos
+    Return
+
+#if (getKeyState("F23", "P")) and #IfWinActive
+if FileExist(DirectoryName "/Documents")
+    Run, %DirectoryName%/Documents
+    Return
+
+#if (getKeyState("F23", "P")) and #IfWinActive
+if FileExist(DirectoryName "/Project files")
+    Run, %DirectoryName%/Project files
+    Return
+
+#if (getKeyState("F23", "P")) and #IfWinActive
+if FileExist(DirectoryName "/Music")
+    Run, %DirectoryName%/Music
+    Return
